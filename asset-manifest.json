@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pomo-widget/static/css/main.844bc97e.css",
+    "main.js": "/pomo-widget/static/js/main.ce04ae25.js",
+    "static/js/787.b9b4fa77.chunk.js": "/pomo-widget/static/js/787.b9b4fa77.chunk.js",
+    "index.html": "/pomo-widget/index.html",
+    "main.844bc97e.css.map": "/pomo-widget/static/css/main.844bc97e.css.map",
+    "main.ce04ae25.js.map": "/pomo-widget/static/js/main.ce04ae25.js.map",
+    "787.b9b4fa77.chunk.js.map": "/pomo-widget/static/js/787.b9b4fa77.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.844bc97e.css",
+    "static/js/main.ce04ae25.js"
+  ]
+}
