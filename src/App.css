@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.main {
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 16vmin;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  gap: 6vmin;
+}
+
+.work{
+  background: #f04f32;
+  display: flex;
+}
+
+.rest{
+  background: #38d6ac;
+  display: flex;
+}
+
+.settingMain {
+  background: #e3e3e3;
+  display: none;
+}
+
+.timer {
+  font-size: 25vmin;
   color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  opacity: 0;
+  color: white;
+  font-size: 16vmin;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  opacity: 1;
+}
+
+.stBtn {
+  color: #a3a3a3;
+  font-size: 16vmin;
+}
+
+.stBtn:hover {
+  color: #942a00;
+  font-size: 16vmin;
+}
+
+.textLine {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inText {
+  outline: none;
+  border-style: none;
+  width: 20vmin;
+  text-align: center;
+  background: none;
+  margin-left: auto;
+}
+
+.inText:focus {
+  border-style: none;
+  border-width: 0;
+}
+
+.text {
+  font-size: 10vmin;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 7vmin;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
