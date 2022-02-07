@@ -37,13 +37,23 @@ export default function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!paused) {
+      if (!paused && mode != modes.setting) {
         setTimer(t => t-1);
       }
     }, 1000);
 
+    if ( timer < 0 ) {
+      if (mode === modes.work) {
+        setMode(modes.rest);
+        setTimer(restTime);
+      } else {
+        setMode(modes.work);
+        setTimer(workTime);
+      }
+    }
+
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [paused, timer]);
 
   const timerSection = (
     <div className={"main "+(mode===modes.work?'work':'rest')}>
@@ -51,7 +61,7 @@ export default function App() {
         <MdRefresh 
           className="btn" 
           onClick={()=>{
-            mode == modes.work ? setTimer(workTime) : setTimer(restTime);
+            mode === modes.work ? setTimer(workTime) : setTimer(restTime);
           }}
         />
         {paused ? 
@@ -73,7 +83,7 @@ export default function App() {
         />
       </div>
       <ShowTime time={timer} />
-      {mode == modes.rest 
+      {mode === modes.rest 
         ?<MdWork 
             className="btn" 
             onClick={()=>{
